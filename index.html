@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#effaff">
+  <meta name="description" content="Rajendran Tech Purifier — water purifiers, home appliances, installation and service in Dharmapuri, Tamil Nadu.">
+  <title>Rajendran Tech Purifier | Pure water, dependable service</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #123143;
+      --muted: #607986;
+      --blue: #087da9;
+      --blue-dark: #075a7d;
+      --aqua: #20b5c7;
+      --mint: #e7f8f6;
+      --line: #dfebef;
+      --paper: #fff;
+      --wash: #f5fafb;
+      --gold: #f5a623;
+      --green: #14845e;
+      --shadow: 0 18px 54px rgba(14, 57, 78, .09);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; }
+    .wrap { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; color: var(--blue);
+      font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    }
+    .eyebrow::before { width: 21px; height: 2px; content: ""; background: var(--aqua); }
+    .section { padding: 82px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 27px; }
+    .section-head h2 { margin: 9px 0 8px; font-size: clamp(1.8rem, 3.7vw, 2.55rem); line-height: 1.12; letter-spacing: -.045em; }
+    .section-head p { max-width: 610px; margin: 0; color: var(--muted); line-height: 1.65; }
+    .text-link { color: var(--blue); font-weight: 750; white-space: nowrap; }
+    .text-link:hover { color: var(--blue-dark); }
+    .btn {
+      display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 9px;
+      padding: 0 19px; border: 1px solid transparent; border-radius: 12px; cursor: pointer;
+      font-size: .92rem; font-weight: 760; transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #fff; background: var(--blue); box-shadow: 0 8px 20px rgba(8, 125, 169, .2); }
+    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-light { color: var(--blue-dark); border-color: #d2e8ee; background: #fff; }
+    .btn-light:hover { background: #f1fbfd; }
+    .btn-quiet { color: var(--blue-dark); border-color: var(--line); background: var(--wash); }
+    .icon { width: 19px; height: 19px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .topline { color: #fff; background: #0c4661; font-size: .78rem; }
+    .topline-inner { display: flex; min-height: 35px; align-items: center; justify-content: space-between; gap: 12px; }
+    .topline strong { color: #a6eff0; font-weight: 750; }
+    .topline-right { display: flex; gap: 20px; }
+    .header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(220, 235, 239, .9); background: rgba(255,255,255,.95); backdrop-filter: blur(14px); }
+    .header-main { display: flex; min-height: 82px; align-items: center; gap: 26px; }
+    .brand { display: inline-flex; min-width: 228px; align-items: center; gap: 10px; }
+    .brand-mark {
+      display: grid; width: 48px; height: 48px; place-items: center; border: 2px solid #20a6bd;
+      border-radius: 15px 15px 15px 5px; color: #fff; background: linear-gradient(145deg, #087da9, #24c4c6);
+      box-shadow: 0 5px 14px rgba(17, 143, 171, .18); font-size: 1rem; font-weight: 900; letter-spacing: -.07em;
+    }
+    .brand-copy { display: grid; gap: 2px; }
+    .brand-name { font-size: 1.03rem; font-weight: 900; letter-spacing: -.035em; line-height: 1.05; }
+    .brand-tag { color: var(--muted); font-size: .62rem; font-weight: 750; letter-spacing: .13em; }
+    .search { position: relative; display: flex; flex: 1; align-items: center; }
+    .search .icon { position: absolute; left: 16px; color: #64818d; }
+    .search input { width: 100%; height: 48px; padding: 0 16px 0 45px; border: 1px solid var(--line); border-radius: 13px; outline: none; background: #f8fcfd; }
+    .search input:focus { border-color: #61bfce; box-shadow: 0 0 0 3px rgba(32,181,199,.13); }
+    .head-actions { display: flex; align-items: center; gap: 9px; }
+    .head-action { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 7px; padding: 0 12px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font-size: .85rem; font-weight: 750; cursor: pointer; }
+    .cart-count { display: grid; min-width: 21px; height: 21px; place-items: center; padding: 0 5px; border-radius: 20px; color: #fff; background: var(--blue); font-size: .7rem; }
+    .nav { border-top: 1px solid #edf3f5; }
+    .nav-inner { display: flex; min-height: 49px; align-items: center; justify-content: space-between; gap: 20px; }
+    .nav-links { display: flex; align-items: center; gap: clamp(16px, 3vw, 37px); overflow: auto; scrollbar-width: none; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { flex: 0 0 auto; color: #375664; font-size: .84rem; font-weight: 700; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-note { display: inline-flex; align-items: center; gap: 7px; color: var(--green); font-size: .78rem; font-weight: 800; white-space: nowrap; }
+    .pulse { width: 8px; height: 8px; border-radius: 50%; background: #2fb989; box-shadow: 0 0 0 4px #dff6ec; }
+
+    .hero-shell { position: relative; overflow: hidden; padding: 27px 0 46px; background: radial-gradient(ellipse at 9% 33%,rgba(136,226,231,.18),transparent 30%), linear-gradient(180deg, #f1fbfd 0%, #fff 100%); }
+    .hero-shell::before { position: absolute; inset: 0; content: ""; pointer-events: none; opacity: .31; background-image: repeating-linear-gradient(116deg,transparent 0 41px,rgba(40,160,184,.07) 42px,transparent 44px 85px); background-size: 210% 100%; animation: current-drift 32s linear infinite; }
+    .hero {
+      position: relative; display: grid; min-height: 455px; grid-template-columns: 1.05fr .95fr; align-items: center;
+      overflow: hidden; border: 1px solid #dceff2; border-radius: 27px;
+      background: radial-gradient(ellipse at 82% 35%, rgba(166,242,235,.78), transparent 35%), radial-gradient(ellipse at 9% 110%,rgba(90,203,216,.2),transparent 40%), linear-gradient(117deg, #eaf9fc 4%, #d7f3f5 55%, #c1e8ed 100%);
+      box-shadow: var(--shadow);
+    }
+    .hero::after { position: absolute; z-index: 0; right: 40%; bottom: -180px; width: 410px; height: 410px; border: 1px solid rgba(6,125,169,.11); border-radius: 50%; content: ""; pointer-events: none; }
+    .hero-water { position: absolute; z-index: 1; right: -3%; bottom: -3px; left: -3%; height: 28%; overflow: hidden; pointer-events: none; opacity: .34; }
+    .hero-water svg { width: 200%; height: 100%; overflow: visible; }
+    .hero-water-back { fill: rgba(32,181,199,.19); animation: wave-drift 19s ease-in-out infinite alternate; }
+    .hero-water-front { fill: rgba(255,255,255,.32); animation: wave-drift 14s ease-in-out infinite alternate-reverse; }
+    .hero-drop { position: absolute; z-index: 1; width: 13px; height: 18px; border: 1px solid rgba(255,255,255,.88); border-radius: 70% 35% 65% 40%; opacity: 0; pointer-events: none; background: linear-gradient(145deg,rgba(255,255,255,.96),rgba(53,187,209,.42) 60%,rgba(9,124,169,.35)); box-shadow: inset -2px -2px 3px rgba(8,125,169,.16), 0 3px 8px rgba(8,125,169,.12); transform: rotate(38deg); animation: droplet-fall 6.5s ease-in infinite; }
+    .hero-drop::after { position: absolute; top: 3px; left: 3px; width: 3px; height: 6px; border-radius: 50%; content: ""; background: rgba(255,255,255,.9); transform: rotate(14deg); }
+    .drop-one { top: 8%; right: 21%; animation-delay: .4s; }
+    .drop-two { top: 5%; right: 34%; width: 9px; height: 13px; animation-delay: 2.8s; }
+    .drop-three { top: 25%; right: 8%; width: 11px; height: 15px; animation-delay: 4.4s; }
+    .drop-four { top: 21%; right: 43%; width: 8px; height: 12px; animation-delay: 1.7s; }
+    .drop-five { top: 4%; right: 52%; width: 10px; height: 14px; animation-delay: 5.2s; }
+    .hero-copy { position: relative; z-index: 3; padding: 53px 0 53px 58px; }
+    .hero-copy h1 { max-width: 570px; margin: 16px 0 15px; font-size: clamp(2.6rem, 5vw, 4.35rem); line-height: .99; letter-spacing: -.065em; }
+    .hero-copy h1 span { color: var(--blue); }
+    .hero-copy p { max-width: 495px; margin: 0; color: #456875; font-size: 1.03rem; line-height: 1.7; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    .hero-points { display: flex; flex-wrap: wrap; gap: 14px 20px; margin-top: 23px; color: #456875; font-size: .79rem; font-weight: 700; }
+    .hero-points span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero-points b { color: var(--green); font-size: 1rem; }
+    .hero-art { position: relative; z-index: 2; display: grid; min-height: 400px; place-items: center; }
+    .hero-ring { position: absolute; width: min(37vw, 390px); aspect-ratio: 1; border: 1px solid rgba(4,113,151,.15); border-radius: 50%; background: rgba(255,255,255,.23); box-shadow: 0 0 0 27px rgba(255,255,255,.18), 0 0 0 60px rgba(255,255,255,.12); animation: ring-breathe 7s ease-in-out infinite; }
+    .hero-machine { position: relative; width: clamp(230px, 30vw, 338px); height: 325px; filter: drop-shadow(0 26px 19px rgba(22,86,103,.19)); }
+    .machine-body { position: absolute; inset: 14px 36px 0; border: 1px solid #d3e2e8; border-radius: 28px 28px 22px 22px; background: linear-gradient(100deg,#e7eef1 0%,#fff 18%,#f8fbfc 70%,#dce8ec 100%); }
+    .machine-top { position: absolute; top: 0; left: 24px; width: calc(100% - 48px); height: 48px; border: 1px solid #cfe0e5; border-radius: 24px 24px 12px 12px; background: linear-gradient(160deg,#fff,#e7f0f3); }
+    .machine-panel { position: absolute; top: 79px; left: 50%; display: grid; width: 106px; height: 139px; place-items: center; transform: translateX(-50%); border: 5px solid #e6eef1; border-radius: 18px; color: #e4ffff; background: linear-gradient(145deg,#193c4d,#102b3b); }
+    .machine-panel::before { position: absolute; top: 19px; width: 51px; height: 51px; border: 1px solid rgba(116,233,238,.5); border-radius: 50%; content: ""; background: radial-gradient(circle,#39cbd0 0 3px,transparent 4px); box-shadow: 0 0 17px rgba(54,211,217,.35); }
+    .machine-panel::after { position: absolute; bottom: 17px; width: 37px; height: 5px; border-radius: 5px; content: ""; background: #25bbc7; }
+    .machine-tap { position: absolute; top: 224px; left: 50%; width: 38px; height: 36px; transform: translateX(-50%); border: 4px solid #b8cbd1; border-top: 0; border-radius: 0 0 15px 15px; }
+    .machine-tap::after { position: absolute; right: -9px; bottom: 4px; width: 11px; height: 8px; border-radius: 0 6px 6px 0; content: ""; background: #b8cbd1; }
+    .machine-glass { position: absolute; right: 50px; bottom: 24px; width: 24px; height: 35px; overflow: hidden; border: 1px solid #88cbd0; border-radius: 2px 2px 7px 7px; background: linear-gradient(0deg,#67d6d3 0 44%,rgba(255,255,255,.48) 45%); }
+    .machine-glass::before { position: absolute; right: -3px; bottom: 12px; left: -3px; height: 8px; border-radius: 50%; content: ""; background: rgba(228,255,255,.6); animation: glass-ripple 2.4s ease-in-out infinite alternate; }
+    .hero-float { position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 11px 15px; border: 1px solid rgba(223,239,241,.95); border-radius: 14px; background: rgba(255,255,255,.93); box-shadow: 0 12px 30px rgba(24,79,94,.12); }
+    .hero-float svg { color: var(--blue); }
+    .hero-float strong { display: block; font-size: .82rem; }
+    .hero-float small { display: block; margin-top: 2px; color: var(--muted); font-size: .7rem; }
+    .float-top { top: 61px; right: 2px; }
+    .float-bottom { bottom: 44px; left: 4px; }
+    .trust-row { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; margin-top: 19px; }
+    .trust-item { position: relative; display: flex; min-height: 70px; align-items: center; gap: 10px; padding: 11px 13px; overflow: hidden; border: 1px solid #e5eef0; border-radius: 14px; background: #fff; transition: transform .24s ease,border-color .24s ease,box-shadow .24s ease; }
+    .trust-item:hover { transform: translateY(-3px); border-color: #b6e4e9; box-shadow: 0 10px 24px rgba(8,125,169,.08); }
+    .trust-icon { display: grid; width: 35px; height: 35px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(58,177,195,.12); border-radius: 11px; color: var(--blue); background: linear-gradient(145deg,#f6ffff,#ddf5f6); box-shadow: inset 0 1px 2px rgba(255,255,255,.9); }
+    .trust-item strong { display: block; font-size: .75rem; }
+    .trust-item small { display: block; margin-top: 3px; color: var(--muted); font-size: .66rem; line-height: 1.3; }
+    .trust-disclaimer { margin: 10px 2px 0; color: var(--muted); font-size: .68rem; line-height: 1.45; }
+
+    .categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .category {
+      position: relative; display: flex; min-height: 174px; align-items: flex-start; gap: 14px; padding: 17px 15px;
+      overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; text-align: left;
+      cursor: pointer; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+    .category::before { position: absolute; top: -60%; right: -40%; width: 110px; height: 220%; content: ""; background: linear-gradient(90deg,transparent,rgba(255,255,255,.72),transparent); opacity: 0; pointer-events: none; transform: rotate(24deg); transition: opacity .25s ease; }
+    .category:hover::before { opacity: 1; animation: glint-sweep .9s ease both; }
+    .category:hover { transform: translateY(-3px); border-color: #9bd9e0; box-shadow: 0 12px 24px rgba(13,79,100,.07); }
+    .category-art { position: relative; display: grid; width: 60px; height: 66px; flex: 0 0 auto; place-items: center; overflow: hidden; border: 1px solid rgba(26,152,176,.1); border-radius: 15px; color: var(--blue); background: linear-gradient(145deg,#effbfd,#dff5f5); }
+    .category-art::before { position: absolute; right: -9px; bottom: -15px; left: -9px; height: 33px; border: 1px solid rgba(24,163,187,.18); border-radius: 50%; content: ""; box-shadow: 0 -7px 0 -5px rgba(24,163,187,.14),0 -14px 0 -11px rgba(24,163,187,.12); animation: category-tide 5s ease-in-out infinite alternate; }
+    .category-art .icon { position: relative; z-index: 1; filter: drop-shadow(0 3px 4px rgba(8,125,169,.14)); transition: transform .25s ease; }
+    .category:hover .category-art .icon { transform: translateY(-3px); }
+    .category-art .icon { width: 31px; height: 31px; }
+    .category-copy { min-width: 0; padding: 2px 2px 10px 0; }
+    .category strong { display: block; padding-right: 7px; font-size: .91rem; line-height: 1.25; }
+    .category small { display: block; margin-top: 5px; color: var(--muted); font-size: .72rem; line-height: 1.4; }
+    .category-points { display: grid; gap: 5px; margin: 10px 0 0; padding: 0; list-style: none; }
+    .category-points li { position: relative; padding-left: 12px; color: #496975; font-size: .69rem; line-height: 1.35; }
+    .category-points li::before { position: absolute; top: .48em; left: 0; width: 5px; height: 5px; border-radius: 50%; content: ""; background: var(--aqua); box-shadow: 0 0 0 2px rgba(32,181,199,.12); }
+    .category .arrow { position: absolute; right: 12px; bottom: 10px; color: #80a1ab; font-size: .9rem; }
+    .category.featured { border-color: #b9e8e8; background: linear-gradient(130deg,#f3fcfd,#fff); }
+
+    .product-section { position: relative; overflow: hidden; background: radial-gradient(ellipse at 8% 10%,rgba(164,232,236,.18),transparent 26%),linear-gradient(180deg,#f5fafb,#f0f8fa 54%,#f8fbfc); }
+    .product-section::before { position: absolute; inset: 0; content: ""; pointer-events: none; opacity: .28; background-image: repeating-linear-gradient(167deg,transparent 0 54px,rgba(35,151,178,.06) 55px,transparent 57px 112px); background-size: 180% 100%; animation: current-drift 40s linear infinite reverse; }
+    .product-section > .wrap { position: relative; z-index: 1; }
+    .catalog-tools { display: flex; align-items: center; gap: 10px; }
+    .result-count { margin-right: 4px; color: var(--muted); font-size: .84rem; white-space: nowrap; }
+    .sort-select { min-height: 44px; padding: 0 36px 0 12px; border: 1px solid var(--line); border-radius: 11px; outline: none; color: var(--ink); background: #fff; }
+    .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
+    .product-card { overflow: hidden; border: 1px solid #e1eaed; border-radius: 17px; background: #fff; transition: transform .2s ease, box-shadow .2s ease,border-color .2s ease; }
+    .product-card:hover { transform: translateY(-4px); border-color: #bfe2e7; box-shadow: 0 15px 32px rgba(17,67,86,.1); }
+    .product-photo { position: relative; display: grid; height: 208px; place-items: center; overflow: hidden; background: radial-gradient(ellipse at 50% 110%,rgba(56,184,199,.15),transparent 56%),linear-gradient(145deg,#f3fbfc,#e8f5f7); }
+    .product-photo::before { position: absolute; width: 160px; height: 160px; border: 1px solid rgba(31,157,175,.12); border-radius: 50%; content: ""; box-shadow: 0 0 0 18px rgba(255,255,255,.3), 0 0 0 39px rgba(255,255,255,.24); }
+    .product-photo::after { position: absolute; top: -30%; bottom: -30%; left: -42%; width: 34%; content: ""; pointer-events: none; background: linear-gradient(90deg,transparent,rgba(255,255,255,.63),transparent); transform: rotate(18deg); transition: left .65s ease; }
+    .product-card:hover .product-photo::after { left: 120%; }
+    .discount { position: absolute; z-index: 3; top: 13px; left: 13px; padding: 6px 9px; border-radius: 7px; color: #fff; background: #c54b39; font-size: .72rem; font-weight: 850; }
+    .product-badge { position: absolute; z-index: 3; top: 13px; right: 13px; padding: 6px 8px; border: 1px solid #d5efdf; border-radius: 7px; color: #237b57; background: #f1fcf5; font-size: .65rem; font-weight: 800; }
+    .product-image { position: relative; z-index: 1; display: block; width: 168px; height: 178px; filter: drop-shadow(0 12px 10px rgba(28,74,85,.16)); object-fit: contain; }
+    .gallery-trigger { position: relative; z-index: 2; display: grid; width: 100%; height: 100%; place-items: center; padding: 20px; border: 0; background: transparent; cursor: zoom-in; }
+    .gallery-trigger .product-image { width: 74%; height: 74%; max-width: 154px; max-height: 154px; filter: none; transition: transform .3s ease; }
+    .gallery-trigger:hover .product-image { transform: scale(1.045); }
+    .gallery-hint { position: absolute; right: 9px; bottom: 8px; padding: 5px 8px; border: 1px solid rgba(208,231,236,.9); border-radius: 20px; color: #315a69; background: rgba(255,255,255,.92); box-shadow: 0 3px 10px rgba(17,67,86,.08); font-size: .65rem; font-weight: 750; }
+    .product-info { padding: 14px 15px 15px; }
+    .product-category { color: var(--blue); font-size: .68rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+    .product-info h3 { display: -webkit-box; min-height: 44px; margin: 7px 0 7px; overflow: hidden; font-size: .94rem; line-height: 1.42; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+    .rating { display: flex; min-height: 20px; align-items: center; gap: 5px; color: var(--gold); font-size: .82rem; }
+    .rating span { color: #516c77; font-size: .73rem; }
+    .rating .no-rating { color: #718892; font-size: .72rem; }
+    .price-line { display: flex; align-items: baseline; gap: 8px; margin-top: 11px; }
+    .price { font-size: 1.25rem; font-weight: 900; letter-spacing: -.035em; }
+    .old-price { color: #899ba2; font-size: .78rem; text-decoration: line-through; }
+    .save-line { margin-top: 3px; color: var(--green); font-size: .71rem; font-weight: 750; }
+    .product-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 13px; }
+    .product-actions .btn { min-height: 40px; padding-inline: 8px; border-radius: 9px; font-size: .77rem; }
+    .shipping-note { display: flex; align-items: center; gap: 5px; margin-top: 11px; color: #68808a; font-size: .68rem; }
+    .shipping-note .icon { width: 14px; height: 14px; color: var(--green); }
+    .empty-state { grid-column: 1 / -1; padding: 50px 20px; border: 1px dashed #c9dce1; border-radius: 16px; color: var(--muted); background: #fff; text-align: center; }
+
+    .water-test { padding: 0 0 82px; }
+    .test-card { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 30px; padding: 37px 43px; overflow: hidden; border-radius: 24px; color: #fff; background: linear-gradient(115deg,#075774,#087da9 61%,#20aeba); }
+    .test-card::after { position: absolute; top: -120px; right: 5%; width: 380px; height: 380px; border: 1px solid rgba(255,255,255,.17); border-radius: 50%; content: ""; box-shadow: 0 0 0 25px rgba(255,255,255,.06), 0 0 0 55px rgba(255,255,255,.04); }
+    .test-copy, .test-form { position: relative; z-index: 1; }
+    .test-copy .eyebrow { color: #baf7f0; }
+    .test-copy h2 { max-width: 520px; margin: 12px 0; font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.06; letter-spacing: -.05em; }
+    .test-copy p { max-width: 540px; margin: 0; color: #d7f2f5; line-height: 1.65; }
+    .test-facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 19px; }
+    .test-facts span { padding: 7px 10px; border: 1px solid rgba(255,255,255,.27); border-radius: 100px; color: #e9ffff; background: rgba(255,255,255,.09); font-size: .73rem; font-weight: 750; }
+    .test-form { display: grid; align-content: center; grid-template-columns: 1fr 1fr; gap: 11px; padding: 19px; border: 1px solid rgba(255,255,255,.3); border-radius: 17px; background: rgba(255,255,255,.12); backdrop-filter: blur(8px); }
+    .test-form h3 { grid-column: 1 / -1; margin: 0 0 2px; font-size: 1rem; }
+    .test-form label { display: grid; gap: 5px; color: #e7fbfc; font-size: .7rem; font-weight: 700; }
+    .test-form input { width: 100%; height: 42px; padding: 0 11px; border: 1px solid rgba(255,255,255,.56); border-radius: 9px; outline: 0; color: var(--ink); background: #fff; font-size: .82rem; }
+    .test-form input:focus { box-shadow: 0 0 0 3px rgba(159,247,240,.3); }
+    .test-form .full { grid-column: 1 / -1; }
+    .test-form .btn { min-height: 44px; color: var(--blue-dark); background: #c8fbef; }
+    .test-form .privacy-note { align-self: center; color: #dbf5f7; font-size: .66rem; line-height: 1.45; }
+    .form-status { grid-column: 1 / -1; margin: 0; color: #e7ffff; font-size: .76rem; }
+
+    .services { background: #f7fbfc; }
+    .service-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 15px; }
+    .service-card { position: relative; display: flex; min-height: 213px; flex-direction: column; align-items: flex-start; padding: 22px; overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: linear-gradient(150deg,#fff 58%,#f2fbfc); transition: transform .23s ease,border-color .23s ease,box-shadow .23s ease; }
+    .service-card::after { position: absolute; right: -30px; bottom: -39px; width: 110px; height: 110px; border: 1px solid rgba(25,160,181,.13); border-radius: 50%; content: ""; box-shadow: 0 0 0 12px rgba(25,160,181,.04),0 0 0 25px rgba(25,160,181,.035); transition: transform .35s ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: #b6e1e6; box-shadow: 0 13px 28px rgba(14,79,99,.08); }
+    .service-card:hover::after { transform: scale(1.12); }
+    .service-symbol { display: grid; width: 45px; height: 45px; place-items: center; border-radius: 14px; color: var(--blue); background: #e7f8fa; }
+    .service-card h3 { margin: 17px 0 7px; font-size: 1rem; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .81rem; line-height: 1.58; }
+    .service-card a { margin-top: auto; padding-top: 15px; color: var(--blue); font-size: .79rem; font-weight: 800; }
+    .complaint-panel { display: grid; grid-template-columns: .85fr 1.15fr; gap: 30px; margin-top: 33px; padding: 31px; border: 1px solid #dcecef; border-radius: 20px; background: linear-gradient(130deg,#f0fafb,#fff 68%); }
+    .complaint-intro h3 { margin: 10px 0 9px; font-size: 1.5rem; letter-spacing: -.04em; }
+    .complaint-intro p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.7; }
+    .complaint-contact { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; color: var(--blue); font-size: .82rem; font-weight: 800; }
+    .complaint-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .complaint-form label { display: grid; min-width: 0; gap: 6px; color: #526e79; font-size: .74rem; font-weight: 750; }
+    .complaint-form input:not([type="file"]), .complaint-form textarea { width: 100%; min-height: 43px; padding: 10px 12px; border: 1px solid #dbe8eb; border-radius: 10px; outline: 0; color: var(--ink); background: #fff; font: inherit; font-size: .82rem; }
+    .complaint-form textarea { min-height: 91px; resize: vertical; }
+    .complaint-form input:focus, .complaint-form textarea:focus { border-color: #61bfce; box-shadow: 0 0 0 3px rgba(32,181,199,.13); }
+    .complaint-form .full { grid-column: 1 / -1; }
+    .upload-zone { position: relative; display: flex !important; min-height: 103px; align-items: center; justify-content: center; gap: 8px !important; padding: 14px; border: 1px dashed #91c7d0; border-radius: 12px; color: var(--blue) !important; background: #f7fcfd; text-align: center; cursor: pointer; }
+    .upload-zone:hover { border-color: var(--blue); background: #eef9fb; }
+    .upload-zone span { color: #526e79; font-weight: 600; line-height: 1.5; }
+    .upload-zone strong { display: block; color: var(--blue); font-size: .83rem; }
+    .upload-zone small { display: block; margin-top: 3px; font-size: .68rem; }
+    .upload-zone input[type="file"] { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
+    .upload-zone:focus-within { outline: 3px solid rgba(32,181,199,.2); }
+    .attachment-list { display: grid; grid-template-columns: repeat(auto-fill,minmax(110px,1fr)); gap: 9px; }
+    .attachment-item { position: relative; min-width: 0; padding: 7px; border: 1px solid var(--line); border-radius: 11px; background: #fff; }
+    .attachment-item img { display: block; width: 100%; height: 76px; border-radius: 7px; background: #f2f7f8; object-fit: cover; }
+    .attachment-file-icon { display: grid; width: 100%; height: 76px; place-items: center; border-radius: 7px; color: var(--blue); background: #eaf6f8; font-size: .76rem; font-weight: 850; }
+    .attachment-name { display: block; margin-top: 5px; overflow: hidden; color: #526e79; font-size: .66rem; text-overflow: ellipsis; white-space: nowrap; }
+    .attachment-remove { position: absolute; top: 3px; right: 3px; display: grid; width: 26px; height: 26px; place-items: center; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; color: #fff; background: #163d4b; cursor: pointer; }
+    .complaint-note, .complaint-status { margin: 0; color: var(--muted); font-size: .71rem; line-height: 1.55; }
+    .complaint-status { color: var(--green); font-weight: 700; }
+    .complaint-status.error { color: #b13d34; }
+    .complaint-submit { justify-self: start; }
+
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+    .why-card { padding: 28px; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(140deg,#f0fbfc,#fff); }
+    .why-card h2 { margin: 11px 0 10px; font-size: clamp(1.8rem,3vw,2.4rem); line-height: 1.07; letter-spacing: -.05em; }
+    .why-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .why-list { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .why-point { display: flex; align-items: flex-start; gap: 10px; padding: 14px 13px; border: 1px solid #e8eff1; border-radius: 13px; background: #fff; }
+    .why-point .icon { color: var(--green); }
+    .why-point strong { display: block; font-size: .8rem; }
+    .why-point small { display: block; margin-top: 4px; color: var(--muted); font-size: .71rem; line-height: 1.45; }
+    .faq { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    details { padding: 17px 18px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+    summary { cursor: pointer; font-size: .88rem; font-weight: 780; }
+    details p { margin: 11px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.65; }
+
+    .footer { padding: 49px 0 20px; color: #d2e8ed; background: #103c50; }
+    .footer-main { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 34px; }
+    .footer .brand-name { color: #fff; }
+    .footer .brand-tag { color: #a9cad3; }
+    .footer .brand-mark { border-color: #36c1c5; }
+    .footer-about p { max-width: 300px; margin: 16px 0 0; color: #a9cad3; font-size: .82rem; line-height: 1.65; }
+    .footer h3 { margin: 2px 0 14px; color: #fff; font-size: .85rem; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a, .footer-links span { color: #b5d1d8; font-size: .79rem; line-height: 1.5; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(213,239,243,.14); color: #9cbec7; font-size: .72rem; }
+    .footer-bottom a { color: #d5eff2; }
+
+    @keyframes current-drift { to { background-position: 210% 0; } }
+    @keyframes wave-drift { from { transform: translateX(-8%) translateY(3px); } to { transform: translateX(2%) translateY(-4px); } }
+    @keyframes droplet-fall {
+      0% { opacity: 0; transform: translate3d(0,-14px,0) rotate(38deg) scale(.8); }
+      12% { opacity: .8; }
+      76% { opacity: .72; }
+      100% { opacity: 0; transform: translate3d(-17px,178px,0) rotate(38deg) scale(1.08); }
+    }
+    @keyframes ring-breathe { 0%,100% { transform: scale(.98); opacity: .82; } 50% { transform: scale(1.025); opacity: 1; } }
+    @keyframes glass-ripple { from { transform: translateX(-4px) scaleX(.78); opacity: .55; } to { transform: translateX(4px) scaleX(1.12); opacity: .95; } }
+    @keyframes category-tide { from { transform: translateX(-7px) translateY(1px); } to { transform: translateX(7px) translateY(-4px); } }
+    @keyframes glint-sweep { from { right: 120%; } to { right: -40%; } }
+
+    .floating-actions { position: fixed; z-index: 25; right: 20px; bottom: 20px; display: grid; gap: 10px; }
+    .float-action { display: inline-flex; min-height: 51px; align-items: center; gap: 9px; padding: 0 16px; border: 1px solid rgba(255,255,255,.3); border-radius: 100px; color: #fff; box-shadow: 0 10px 24px rgba(18,62,70,.2); font-size: .81rem; font-weight: 800; }
+    .float-whatsapp { background: #1fae69; }
+    .float-call { background: var(--blue); }
+    .float-action .icon { width: 20px; height: 20px; }
+    .scrim { position: fixed; z-index: 39; inset: 0; visibility: hidden; opacity: 0; background: rgba(8,35,48,.46); transition: opacity .2s ease, visibility .2s ease; }
+    .scrim.open { visibility: visible; opacity: 1; }
+    .drawer { position: fixed; z-index: 40; top: 0; right: 0; display: flex; width: min(430px,100%); height: 100dvh; flex-direction: column; padding: 23px; transform: translateX(103%); background: #fff; box-shadow: -16px 0 48px rgba(7,40,55,.16); transition: transform .25s ease; }
+    .drawer.open { transform: translateX(0); }
+    .drawer-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+    .drawer-head h2 { margin: 0; font-size: 1.3rem; }
+    .close-btn { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid var(--line); border-radius: 11px; background: #fff; cursor: pointer; }
+    .cart-items { flex: 1; overflow: auto; }
+    .cart-empty { padding: 46px 8px; color: var(--muted); text-align: center; line-height: 1.6; }
+    .cart-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .cart-row strong { display: block; font-size: .88rem; line-height: 1.4; }
+    .cart-row small { display: block; margin-top: 5px; color: var(--muted); }
+    .qty-control { display: inline-flex; align-items: center; gap: 10px; margin-top: 9px; }
+    .qty-control button { width: 27px; height: 27px; border: 1px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer; }
+    .cart-row-price { font-weight: 850; white-space: nowrap; }
+    .drawer-bottom { padding-top: 16px; border-top: 1px solid var(--line); }
+    .subtotal { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 1rem; font-weight: 850; }
+    .drawer-bottom .btn { width: 100%; }
+    .drawer-note { margin: 10px 0 0; color: var(--muted); font-size: .7rem; line-height: 1.5; text-align: center; }
+    .modal-layer { position: fixed; z-index: 50; inset: 0; display: grid; place-items: center; padding: 18px; visibility: hidden; opacity: 0; background: rgba(8,35,48,.55); transition: opacity .2s ease, visibility .2s ease; }
+    .modal-layer.open { visibility: visible; opacity: 1; }
+    .modal { position: relative; width: min(490px,100%); padding: 30px; border: 1px solid #d9edf0; border-radius: 22px; background: #fff; box-shadow: 0 24px 80px rgba(5,35,49,.25); }
+    .gallery-modal-layer { z-index: 60; }
+    .gallery-modal { position: relative; width: min(740px,100%); padding: 20px; border: 1px solid rgba(217,237,240,.85); border-radius: 22px; background: #fff; box-shadow: 0 24px 80px rgba(5,35,49,.32); }
+    .gallery-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 2px 48px 15px 3px; }
+    .gallery-header h2 { margin: 0; font-size: clamp(1.05rem,2.4vw,1.42rem); line-height: 1.3; letter-spacing: -.025em; }
+    .gallery-header p { margin: 4px 0 0; color: var(--muted); font-size: .76rem; }
+    .gallery-stage { position: relative; overflow: hidden; border: 1px solid #e1ecef; border-radius: 15px; background: linear-gradient(145deg,#f6fafb,#edf5f6); }
+    .gallery-track { display: flex; width: 100%; transform: translateX(0); transition: transform .45s cubic-bezier(.22,.75,.22,1); }
+    .gallery-slide { display: grid; min-width: 100%; height: min(44vh,360px); place-items: center; padding: 12px; }
+    .gallery-slide img { display: block; width: 76%; height: 76%; max-width: 540px; max-height: 290px; object-fit: contain; }
+    .gallery-arrow { position: absolute; z-index: 2; top: 50%; display: grid; width: 43px; height: 43px; place-items: center; transform: translateY(-50%); border: 1px solid rgba(219,235,239,.95); border-radius: 50%; color: var(--blue-dark); background: rgba(255,255,255,.94); box-shadow: 0 5px 16px rgba(11,60,78,.12); cursor: pointer; }
+    .gallery-arrow:hover { color: #fff; background: var(--blue); }
+    .gallery-arrow:disabled { opacity: .35; cursor: default; }
+    .gallery-arrow-prev { left: 12px; }
+    .gallery-arrow-next { right: 12px; }
+    .gallery-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 3px 1px; }
+    .gallery-filename { min-width: 0; overflow: hidden; color: #456875; font-size: .78rem; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; }
+    .gallery-dots { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; }
+    .gallery-dot { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: #bdd2d8; cursor: pointer; transition: width .2s ease,background .2s ease; }
+    .gallery-dot[aria-current="true"] { width: 23px; border-radius: 10px; background: var(--blue); }
+    .modal-close { position: absolute; top: 14px; right: 14px; }
+    .modal-art { display: grid; width: 54px; height: 54px; place-items: center; border-radius: 16px; color: var(--blue); background: #e7f8fa; }
+    .modal h2 { margin: 16px 0 8px; font-size: 1.65rem; letter-spacing: -.04em; }
+    .modal p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.65; }
+    .modal .test-form { grid-template-columns: 1fr 1fr; margin-top: 18px; padding: 0; border: 0; background: transparent; }
+    .modal .test-form h3 { display: none; }
+    .modal .test-form label { color: #526e79; }
+    .modal .test-form input { border-color: #dbe8eb; background: #f9fcfd; }
+    .modal .test-form .btn { color: #fff; background: var(--blue); }
+    .modal .test-form .privacy-note { color: var(--muted); }
+    .modal .form-status { color: var(--green); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; clip-path: inset(50%); border: 0; }
+
+    @media (max-width: 1040px) {
+      .brand { min-width: 200px; }
+      .header-main { gap: 15px; }
+      .trust-row { grid-template-columns: repeat(3,1fr); }
+      .product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+      .service-grid { grid-template-columns: repeat(2,1fr); }
+      .hero-copy { padding-left: 38px; }
+    }
+    @media (max-width: 740px) {
+      .wrap { width: min(100% - 30px, 600px); }
+      .topline-inner { min-height: 32px; justify-content: center; }
+      .topline-right { display: none; }
+      .header-main { min-height: 69px; flex-wrap: wrap; gap: 9px; padding-block: 9px; }
+      .brand { min-width: 0; flex: 1; }
+      .brand-mark { width: 42px; height: 42px; border-radius: 13px 13px 13px 4px; }
+      .brand-name { font-size: .92rem; }
+      .brand-tag { font-size: .56rem; }
+      .search { order: 3; flex-basis: 100%; }
+      .search input { height: 43px; }
+      .head-actions { gap: 6px; }
+      .head-action { width: 43px; height: 42px; min-height: 42px; padding: 0; }
+      .head-action span:not(.cart-count) { display: none; }
+      .nav-inner { min-height: 45px; }
+      .nav-links { gap: 21px; }
+      .nav-links a { font-size: .78rem; }
+      .nav-note { display: none; }
+      .hero-shell { padding: 16px 0 34px; }
+      .hero { min-height: 0; grid-template-columns: 1fr; border-radius: 21px; }
+      .hero-copy { padding: 31px 25px 0; }
+      .hero-copy h1 { max-width: 490px; font-size: clamp(2.35rem,11vw,3.45rem); }
+      .hero-copy p { font-size: .94rem; }
+      .hero-art { min-height: 315px; }
+      .hero-machine { width: 228px; height: 250px; transform: scale(.82); }
+      .hero-ring { width: 220px; }
+      .float-top { top: 23px; right: 2px; }
+      .float-bottom { bottom: 19px; left: 0; }
+      .hero-float { padding: 9px 11px; }
+      .trust-row { grid-template-columns: repeat(2,1fr); gap: 8px; margin-top: 12px; }
+      .trust-item { min-height: 62px; padding: 8px; gap: 8px; }
+      .trust-icon { width: 31px; height: 31px; }
+      .trust-item strong { font-size: .68rem; }
+      .trust-item small { font-size: .6rem; }
+      .section { padding: 58px 0; }
+      .section-head { align-items: flex-start; flex-direction: column; gap: 13px; margin-bottom: 21px; }
+      .section-head h2 { font-size: 1.9rem; }
+      .categories { grid-template-columns: repeat(2,1fr); gap: 9px; }
+      .category { min-height: 174px; gap: 9px; padding: 12px 10px; }
+      .category-art { width: 43px; height: 49px; border-radius: 12px; }
+      .category-art .icon { width: 28px; height: 28px; }
+      .category-copy { padding-top: 1px; }
+      .category strong { padding-right: 2px; font-size: .76rem; }
+      .category small { font-size: .64rem; }
+      .category-points { gap: 5px; margin-top: 8px; }
+      .category-points li { padding-left: 9px; font-size: .61rem; line-height: 1.32; }
+      .category-points li::before { width: 4px; height: 4px; }
+      .category .arrow { right: 8px; bottom: 7px; }
+      .catalog-tools { width: 100%; justify-content: space-between; }
+      .result-count { font-size: .76rem; }
+      .sort-select { min-height: 41px; font-size: .76rem; }
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+      .product-photo { height: 163px; }
+      .product-image { width: 137px; height: 137px; }
+      .gallery-trigger .product-image { width: 72%; height: 72%; max-width: 122px; max-height: 122px; }
+      .product-info { padding: 11px 10px 12px; }
+      .product-info h3 { min-height: 41px; font-size: .82rem; }
+      .product-category { font-size: .6rem; }
+      .discount { top: 8px; left: 8px; padding: 5px 6px; font-size: .62rem; }
+      .product-badge { top: 8px; right: 7px; padding: 5px 6px; font-size: .57rem; }
+      .rating { font-size: .75rem; }
+      .rating span, .rating .no-rating { font-size: .64rem; }
+      .price { font-size: 1.08rem; }
+      .old-price { font-size: .68rem; }
+      .product-actions { gap: 6px; }
+      .product-actions .btn { min-height: 37px; padding-inline: 4px; font-size: .68rem; }
+      .shipping-note { font-size: .61rem; }
+      .test-card { grid-template-columns: 1fr; gap: 22px; padding: 27px 21px; }
+      .test-form { padding: 14px; }
+      .service-grid { grid-template-columns: repeat(2,1fr); gap: 9px; }
+      .service-card { min-height: 201px; padding: 15px; }
+      .service-card h3 { font-size: .88rem; }
+      .service-card p { font-size: .74rem; }
+      .service-card a { font-size: .72rem; }
+      .complaint-panel { grid-template-columns: 1fr; gap: 19px; padding: 21px; }
+      .complaint-form { gap: 9px; }
+      .complaint-submit { width: 100%; }
+      .why-grid { grid-template-columns: 1fr; gap: 19px; }
+      .why-card { padding: 23px; }
+      .why-list { gap: 8px; }
+      .why-point { padding: 11px 9px; gap: 7px; }
+      .why-point strong { font-size: .72rem; }
+      .why-point small { font-size: .65rem; }
+      .faq { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+      .footer-about { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+      .floating-actions { right: 12px; bottom: 12px; }
+      .float-action { min-height: 46px; padding: 0 13px; font-size: .75rem; }
+      .modal { padding: 25px 20px; }
+      .modal .test-form { gap: 9px; }
+      .gallery-modal { padding: 14px; border-radius: 17px; }
+      .gallery-header { padding-right: 40px; }
+      .gallery-slide { height: min(38vh,300px); padding: 7px; }
+      .gallery-slide img { width: 78%; height: 78%; max-height: 240px; }
+      .gallery-arrow { width: 37px; height: 37px; }
+    }
+    @media (max-width: 380px) {
+      .wrap { width: calc(100% - 22px); }
+      .product-grid { gap: 7px; }
+      .product-info { padding-inline: 8px; }
+      .product-actions .btn { font-size: .63rem; }
+      .trust-item small { font-size: .56rem; }
+      .category { gap: 7px; padding: 10px 8px; }
+      .category-art { width: 37px; height: 43px; }
+      .category-art .icon { width: 24px; height: 24px; }
+      .category-points li { font-size: .57rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg class="sr-only" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.3 4.3"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.4v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.6 2 2 0 0 1 3.1 1.4h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.4a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2.1Z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.5S5.2 10.1 5.2 15a6.8 6.8 0 0 0 13.6 0c0-4.9-6.8-12.5-6.8-12.5Z"/><path d="M9 16.2a3.1 3.1 0 0 0 3.1 3.1"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 5h12v12H2zM14 9h4l4 4v4h-8z"/><circle cx="6.5" cy="19" r="2"/><circle cx="17.5" cy="19" r="2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4l-6 6a2 2 0 0 0 2.8 2.8l6-6a5 5 0 0 0 6.4-6.4l-3.2 3.2-3-3Z"/><path d="m17 3 4 4"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 10h20M6 16h4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-ion" viewBox="0 0 24 24"><path d="M12 2.5S5 10 5 15a7 7 0 0 0 14 0c0-5-7-12.5-7-12.5Z"/><path d="M12 9v7m-3.5-3.5h7"/></symbol>
+    <symbol id="i-plant" viewBox="0 0 24 24"><path d="M4 20h16M6 20V9h12v11M4 9h16l-2-5H6zM9 13h2v3H9zm5 0h2v3h-2z"/></symbol>
+    <symbol id="i-softener" viewBox="0 0 24 24"><path d="M7 3h10v18H7zM5 7h14M5 17h14"/><path d="M12 10s-2 2.2-2 3.3a2 2 0 0 0 4 0C14 12.2 12 10 12 10Z"/></symbol>
+    <symbol id="i-air" viewBox="0 0 24 24"><path d="M3 8h12a3 3 0 1 0-3-3M2 12h17a3 3 0 1 1-3 3M4 16h7a3 3 0 1 1-3 3"/></symbol>
+    <symbol id="i-dispenser" viewBox="0 0 24 24"><path d="M8 3h8v6H8zM6 9h12v12H6zM9 13h6m-3-4v3"/><path d="M9 17h.01M15 17h.01"/></symbol>
+    <symbol id="i-vacuum" viewBox="0 0 24 24"><path d="M5 20h14M8 20V9a4 4 0 0 1 8 0v5H9M16 14l3 6M8 14l-2 6"/></symbol>
+    <symbol id="i-geyser" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6m-3 5s-2 2-2 3a2 2 0 0 0 4 0c0-1-2-3-2-3Zm-3 6h.01m6 0h.01"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4l-6 6a2 2 0 0 0 2.8 2.8l6-6a5 5 0 0 0 6.4-6.4l-3.2 3.2-3-3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.4-3"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.7a8.6 8.6 0 0 1-12.7 7.6L3 20.5l1.3-4.6a8.6 8.6 0 1 1 16.2-4.2Z"/><path d="M8.2 8.1c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4 0 .6.5.8 1.2 1.5 2 2 .3.2.5.2.7-.1l.7-.8c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .3-.2 1-.6 1.4-.4.4-1 .7-1.6.7-.5 0-1.2-.2-2-.5-1.2-.5-2.5-1.5-3.5-2.7-1-1.2-1.6-2.4-1.7-3.1-.1-.7.1-1.1.5-1.4Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6.2 6.8 1-4.9 4.8 1.2 6.8-6.1-3.2-6.1 3.2 1.2-6.8-4.9-4.8 6.8-1z"/></symbol>
+  </svg>
+
+  <div class="topline">
+    <div class="wrap topline-inner">
+      <span><strong>LOCAL EXPERTS. CLEANER WATER.</strong> Serving Dharmapuri and nearby areas</span>
+      <div class="topline-right"><a href="tel:+916369860092">Call 63698 60092</a><a href="#services">Installation &amp; service</a></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="wrap header-main">
+      <a class="brand" href="#" aria-label="Rajendran Tech Purifier home">
+        <span class="brand-mark">RT</span><span class="brand-copy"><span class="brand-name">RAJENDRAN TECH</span><span class="brand-tag">WATER • PURIFIER • SERVICE</span></span>
+      </a>
+      <label class="search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+        <span class="sr-only">Search products</span>
+        <input id="searchInput" type="search" placeholder="Search purifiers, RO plants, services..." autocomplete="off">
+      </label>
+      <div class="head-actions">
+        <a class="head-action" href="tel:+916369860092" aria-label="Call 6369860092"><svg class="icon"><use href="#i-phone"/></svg><span>Call</span></a>
+        <button class="head-action" id="openCart" type="button" aria-label="Open shopping cart"><svg class="icon"><use href="#i-cart"/></svg><span>Cart</span><span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="wrap nav-inner">
+        <div class="nav-links">
+          <a href="#">Home</a><a href="#categories">Shop by category</a><a href="#products">Best sellers</a><a href="#water-test">Free water test</a><a href="#services">Services</a><a href="#complaint">Report a problem</a><a href="#contact">Contact</a>
+        </div>
+        <span class="nav-note"><i class="pulse"></i> Dharmapuri, Tamil Nadu</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-shell">
+      <div class="wrap">
+        <div class="hero">
+          <div class="hero-water" aria-hidden="true">
+            <svg viewBox="0 0 1200 140" preserveAspectRatio="none">
+              <path class="hero-water-back" d="M0 66C105 38 187 38 292 64s187 34 292 5 188-37 292-9 188 38 324 0v80H0Z"/>
+              <path class="hero-water-front" d="M0 94c120-34 210-28 317 0s198 31 302 4 200-35 302-11 184 35 279 4v49H0Z"/>
+            </svg>
+          </div>
+          <span class="hero-drop drop-one" aria-hidden="true"></span>
+          <span class="hero-drop drop-two" aria-hidden="true"></span>
+          <span class="hero-drop drop-three" aria-hidden="true"></span>
+          <span class="hero-drop drop-four" aria-hidden="true"></span>
+          <span class="hero-drop drop-five" aria-hidden="true"></span>
+          <div class="hero-copy">
+            <span class="eyebrow">Pure water starts at home</span>
+            <h1>Better water.<br><span>Better every day.</span></h1>
+            <p>Find the right purifier for your water and your family. Shop trusted options, book installation, and get local support from Rajendran Tech Purifier.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#products">Shop water purifiers <span aria-hidden="true">→</span></a>
+              <a class="btn btn-light" href="#water-test"><svg class="icon"><use href="#i-drop"/></svg> Book a free water test</a>
+            </div>
+            <div class="hero-points"><span><b>✓</b> Help choosing the right purifier</span><span><b>✓</b> Local installation and service</span></div>
+          </div>
+          <div class="hero-art" aria-label="Illustration of a modern home water purifier" role="img">
+            <div class="hero-ring"></div>
+            <div class="hero-machine"><div class="machine-body"></div><div class="machine-top"></div><div class="machine-panel"></div><div class="machine-tap"></div><div class="machine-glass"></div></div>
+            <div class="hero-float float-top"><svg class="icon"><use href="#i-drop"/></svg><span><strong>Made for your water</strong><small>Get help choosing a model</small></span></div>
+            <div class="hero-float float-bottom"><svg class="icon"><use href="#i-tools"/></svg><span><strong>Local service support</strong><small>Dharmapuri &amp; nearby areas</small></span></div>
+          </div>
+        </div>
+        <div class="trust-row" aria-label="Shopping benefits">
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-truck"/></svg></span><span><strong>Free shipping</strong><small>On eligible orders</small></span></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-refresh"/></svg></span><span><strong>Money-back guarantee*</strong><small>Confirm item eligibility and terms</small></span></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-tools"/></svg></span><span><strong>Free installation*</strong><small>Ask about product and location</small></span></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-card"/></svg></span><span><strong>Easy EMI</strong><small>Ask for available options</small></span></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-clock"/></svg></span><span><strong>Service within 24 hours*</strong><small>Confirm coverage for your area</small></span></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-shield"/></svg></span><span><strong>Order tracking</strong><small>Get updates from our team</small></span></div>
+        </div>
+        <p class="trust-disclaimer">*Offers, installation, service response and guarantee terms depend on the product and service area. Please confirm details with us before ordering.</p>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">Find your solution</span><h2>Shop by category</h2><p>From drinking water to cleaner air, explore products and services for your home. Ask us about availability for any category.</p></div>
+          <a class="text-link" href="#products">Browse water purifiers <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="categories">
+          <button class="category featured" type="button" data-category="Water Purifier">
+            <span class="category-art"><svg class="icon"><use href="#i-drop"/></svg></span>
+            <span class="category-copy"><strong>Water Purifier</strong><small>RO, UV, UF &amp; more</small><ul class="category-points"><li>Compare purification technologies</li><li>Options for different water sources</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20Water%20Ionizer%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-ion"/></svg></span>
+            <span class="category-copy"><strong>Water Ionizer</strong><small>Ask for available models</small><ul class="category-points"><li>Ask about output settings</li><li>Check compatibility with your water</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20RO%20Plant%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-plant"/></svg></span>
+            <span class="category-copy"><strong>RO Plant</strong><small>Home &amp; commercial systems</small><ul class="category-points"><li>Home and commercial solutions</li><li>Ask about capacity and installation</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20Water%20Softener%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-softener"/></svg></span>
+            <span class="category-copy"><strong>Water Softener</strong><small>Solutions for hard water</small><ul class="category-points"><li>Helps reduce hardness and scale</li><li>Ask about home system sizing</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20Air%20Purifier%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-air"/></svg></span>
+            <span class="category-copy"><strong>Air Purifier</strong><small>Cleaner air for your home</small><ul class="category-points"><li>Ask about filter types</li><li>Compare room-size options</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20Water%20Dispenser%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-dispenser"/></svg></span>
+            <span class="category-copy"><strong>Water Dispenser</strong><small>Hot, cold &amp; ambient options</small><ul class="category-points"><li>Choose hot, cold or ambient</li><li>Ask about storage and placement</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20Vacuum%20Cleaner%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-vacuum"/></svg></span>
+            <span class="category-copy"><strong>Vacuum Cleaner</strong><small>Ask about home-care models</small><ul class="category-points"><li>Ask about floor and surface types</li><li>Compare compact home models</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category" href="https://wa.me/916369860092?text=Hello%2C%20please%20share%20Geyser%20options." target="_blank" rel="noopener noreferrer">
+            <span class="category-art"><svg class="icon"><use href="#i-geyser"/></svg></span>
+            <span class="category-copy"><strong>Geyser</strong><small>Explore available models</small><ul class="category-points"><li>Compare storage capacities</li><li>Ask about installation support</li></ul></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-section" id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">Popular picks</span><h2>Water purifiers for every home</h2><p>Compare popular RO and UV options. Message us to confirm current price, stock, delivery, warranty and installation details before ordering.</p></div>
+          <div class="catalog-tools">
+            <span class="result-count" id="resultCount" aria-live="polite"></span>
+            <label><span class="sr-only">Sort products by price</span><select class="sort-select" id="sortSelect"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select></label>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="water-test" id="water-test">
+      <div class="wrap">
+        <div class="test-card">
+          <div class="test-copy">
+            <span class="eyebrow">Know your water first</span>
+            <h2>Free water test at your home</h2>
+            <p>Not sure which purifier you need? Request a home visit to discuss water quality, then get guidance based on your source and household needs.</p>
+            <div class="test-facts"><span>TDS check</span><span>pH check</span><span>Hardness check</span><span>Personalised guidance</span></div>
+          </div>
+          <form class="test-form lead-form">
+            <h3>Book your free water test</h3>
+            <label>Name<input name="name" autocomplete="name" placeholder="Your name" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+ \-]{8,18}" placeholder="Your phone number" required></label>
+            <label class="full">Email (optional)<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+            <button class="btn full" type="submit">Book free water test <span aria-hidden="true">→</span></button>
+            <span class="privacy-note full">We’ll use these details only to follow up about your request. Submitting opens WhatsApp so you can send the enquiry.</span>
+            <p class="form-status" role="status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">Here when you need us</span><h2>More than just a purifier</h2><p>Get help choosing, setting up and maintaining your water system from a local service team.</p></div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><span class="service-symbol"><svg class="icon"><use href="#i-tools"/></svg></span><h3>Installation &amp; setup</h3><p>Ask about installation options and service coverage for your location.</p><a href="https://wa.me/916369860092?text=Hello%2C%20I%20need%20water%20purifier%20installation%20help." target="_blank" rel="noopener noreferrer">Ask about installation →</a></article>
+          <article class="service-card"><span class="service-symbol"><svg class="icon"><use href="#i-refresh"/></svg></span><h3>Filter replacement</h3><p>Get help identifying the right filter or replacement part for your model.</p><a href="https://wa.me/916369860092?text=Hello%2C%20I%20need%20help%20with%20filter%20replacement." target="_blank" rel="noopener noreferrer">Request filter help →</a></article>
+          <article class="service-card"><span class="service-symbol"><svg class="icon"><use href="#i-wrench"/></svg></span><h3>Repair &amp; maintenance</h3><p>Tell us what’s happening and we’ll help arrange the next service step.</p><a href="#complaint">Report a problem + attach a photo →</a></article>
+          <article class="service-card"><span class="service-symbol"><svg class="icon"><use href="#i-drop"/></svg></span><h3>Water quality guidance</h3><p>Start with a free water test and get help narrowing down suitable options.</p><a href="#water-test">Book a free water test →</a></article>
+        </div>
+        <div class="complaint-panel" id="complaint">
+          <div class="complaint-intro">
+            <span class="eyebrow">Service &amp; support</span>
+            <h3>Need to report a problem?</h3>
+            <p>Describe the issue with your purifier and add a photo or document to help our team understand it. We’ll open a WhatsApp enquiry to the dealer.</p>
+            <a class="complaint-contact" href="tel:+916369860092"><svg class="icon"><use href="#i-phone"/></svg> Call 63698 60092</a>
+          </div>
+          <form class="complaint-form" id="complaintForm">
+            <label>Name<input name="name" autocomplete="name" placeholder="Your name" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+ \-]{8,18}" placeholder="Your phone number" required></label>
+            <label class="full">Purifier model (optional)<input name="model" placeholder="Brand or model name"></label>
+            <label class="full">How can we help?<textarea name="details" placeholder="Describe the issue or service you need" required></textarea></label>
+            <label class="upload-zone full" for="complaintFiles">
+              <svg class="icon" style="width:25px;height:25px"><use href="#i-tools"/></svg>
+              <span><strong>Add photo or file</strong><small>Images or PDF · Up to 5 files · 10 MB each</small></span>
+              <input id="complaintFiles" name="attachments" type="file" accept="image/*,.pdf,application/pdf" multiple aria-describedby="attachmentNote">
+            </label>
+            <div class="attachment-list full" id="attachmentList" aria-live="polite"></div>
+            <p class="complaint-note full" id="attachmentNote">Files stay on your device. WhatsApp does not let this website attach files automatically; after WhatsApp opens, tap its attachment icon and choose the selected photos/files before sending.</p>
+            <p class="complaint-status full" id="complaintStatus" role="status" hidden></p>
+            <button class="btn btn-primary complaint-submit full" type="submit"><svg class="icon"><use href="#i-whatsapp"/></svg> Send complaint enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap why-grid">
+        <div class="why-card"><span class="eyebrow">Helpful, local support</span><h2>Choosing a purifier shouldn’t be confusing.</h2><p>Water sources and household needs differ. Tell us where your water comes from, how many people are at home, and what you’re looking for—we’ll help you compare your options.</p><div class="hero-cta"><a class="btn btn-primary" href="https://wa.me/916369860092?text=Hello%2C%20please%20help%20me%20choose%20a%20water%20purifier." target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-whatsapp"/></svg> Ask us on WhatsApp</a></div></div>
+        <div class="why-list">
+          <div class="why-point"><svg class="icon"><use href="#i-check"/></svg><span><strong>Compare technologies</strong><small>Understand RO, UV, UF and other features.</small></span></div>
+          <div class="why-point"><svg class="icon"><use href="#i-check"/></svg><span><strong>Check your water source</strong><small>Get advice that starts with your needs.</small></span></div>
+          <div class="why-point"><svg class="icon"><use href="#i-check"/></svg><span><strong>Confirm the details</strong><small>Check stock, warranty and installation before purchase.</small></span></div>
+          <div class="why-point"><svg class="icon"><use href="#i-check"/></svg><span><strong>Get ongoing help</strong><small>Contact us about maintenance and service.</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">Good to know</span><h2>Frequently asked questions</h2></div></div>
+        <div class="faq">
+          <details><summary>Which purifier is right for my water?</summary><p>The right option depends on your water source and water quality. Book a free water test or share your source with us to get guidance before purchasing.</p></details>
+          <details><summary>Do you install purifiers in my area?</summary><p>We serve Dharmapuri and nearby areas. Call or WhatsApp us with your pin code to confirm availability and any installation charges.</p></details>
+          <details><summary>Are the prices and delivery dates final?</summary><p>Prices, stock, delivery and offers can change. Please confirm the current details with Rajendran Tech Purifier before placing an order.</p></details>
+          <details><summary>How do I place an order?</summary><p>Add products to your cart and choose “Continue on WhatsApp.” We’ll prepare an enquiry with your selected items; the order is not confirmed until we reply and agree the details.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a class="brand" href="#" aria-label="Rajendran Tech Purifier home"><span class="brand-mark">RT</span><span class="brand-copy"><span class="brand-name">RAJENDRAN TECH</span><span class="brand-tag">WATER • PURIFIER • SERVICE</span></span></a>
+          <p>Water purifiers, home solutions and local service support in Dharmapuri, Tamil Nadu.</p>
+        </div>
+        <div><h3>Shop</h3><div class="footer-links"><a href="#products">Water purifiers</a><a href="#categories">All categories</a><a href="#water-test">Free water test</a><a href="#services">Installation &amp; service</a></div></div>
+        <div><h3>Contact</h3><div class="footer-links"><a href="tel:+916369860092">Call: 63698 60092</a><a href="https://wa.me/916369860092" target="_blank" rel="noopener noreferrer">WhatsApp dealer: 63698 60092</a><a href="https://chat.whatsapp.com/LZ3RwwhEgab2zZTGrJlii4?s=sh&p=a&iam=2" target="_blank" rel="noopener noreferrer">Join our WhatsApp group</a></div></div>
+        <div><h3>Visit / service area</h3><div class="footer-links"><span><svg class="icon" style="width:15px;height:15px;vertical-align:-3px"><use href="#i-pin"/></svg> Near Bus Stand, Dharmapuri,<br>Tamil Nadu, India</span><span>Call for store hours and service coverage.</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Rajendran Tech Purifier. Product prices and availability are subject to confirmation.</span><a href="https://chat.whatsapp.com/LZ3RwwhEgab2zZTGrJlii4?s=sh&p=a&iam=2" target="_blank" rel="noopener noreferrer">Join the WhatsApp group ↗</a></div>
+    </div>
+  </footer>
+
+  <div class="floating-actions" aria-label="Quick contact">
+    <a class="float-action float-whatsapp" href="https://wa.me/916369860092" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp dealer at 6369860092"><svg class="icon"><use href="#i-whatsapp"/></svg><span>WhatsApp dealer</span></a>
+    <a class="float-action float-call" href="tel:+916369860092" aria-label="Call Rajendran Tech Purifier at 6369860092"><svg class="icon"><use href="#i-phone"/></svg><span>Call us</span></a>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head"><h2>Your cart <span id="drawerCount"></span></h2><button class="close-btn" id="closeCart" type="button" aria-label="Close cart"><span aria-hidden="true">×</span></button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-bottom"><div class="subtotal"><span>Estimated subtotal</span><span id="subtotal">₹0</span></div><button class="btn btn-primary" id="checkout" type="button">Continue on WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button><p class="drawer-note">This sends an enquiry with your cart items. We’ll confirm price, stock, delivery and payment with you.</p></div>
+  </aside>
+
+  <div class="modal-layer" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="close-btn modal-close" id="closeModal" type="button" aria-label="Close water test form"><span aria-hidden="true">×</span></button>
+      <span class="modal-art"><svg class="icon" style="width:29px;height:29px"><use href="#i-drop"/></svg></span>
+      <h2 id="modalTitle">Is your water right for your family?</h2>
+      <p>Book a free home water test in Dharmapuri. We can check TDS, pH and hardness, then discuss purifier options for your needs.</p>
+      <form class="test-form lead-form">
+        <label>Name<input name="name" autocomplete="name" placeholder="Your name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+ \-]{8,18}" placeholder="Your phone number" required></label>
+        <label class="full">Email (optional)<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+        <button class="btn full" type="submit">Book my free water test →</button>
+        <span class="privacy-note full">Your enquiry opens in WhatsApp for you to send.</span>
+        <p class="form-status" role="status" hidden></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-layer gallery-modal-layer" id="productGallery" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true">
+    <div class="gallery-modal">
+      <button class="close-btn modal-close" id="closeGallery" type="button" aria-label="Close product gallery"><span aria-hidden="true">×</span></button>
+      <div class="gallery-header">
+        <div><h2 id="galleryTitle"></h2><p id="galleryCount" aria-live="polite"></p></div>
+      </div>
+      <div class="gallery-stage">
+        <div class="gallery-track" id="galleryTrack"></div>
+        <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" type="button" aria-label="Previous photo">‹</button>
+        <button class="gallery-arrow gallery-arrow-next" id="galleryNext" type="button" aria-label="Next photo">›</button>
+      </div>
+      <div class="gallery-footer">
+        <span class="gallery-filename" id="galleryFilename"></span>
+        <div class="gallery-dots" id="galleryDots" aria-label="Choose a product photo"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const products = [
+      { id: "grand-plus", name: "Aqua X Pure Grand Plus Alkaline RO Water Purifier", tech: "RO + UV + UF · Copper & Zinc", price: 8000, mrp: 18999, rating: null, reviews: 350, badge: "Popular", tag: "BEST VALUE", photo: "aqua-x-pure-gallery/shopping.webp", galleryPath: "aqua-x-pure-gallery", gallery: ["shopping.webp", "shopping (1).webp", "shopping (2).webp", "shopping (3).webp"], image: { shell: "#f7fbfd", trim: "#d3e1e7", accent: "#21b8b2", style: "glass" } },
+      { id: "seven-stage", name: "7 Stage Copper & Zinc Water Purifier", tech: "RO + UV + UF · 9L storage", price: 4390, mrp: 20999, rating: null, reviews: null, badge: "", tag: "9L TANK", photo: "seven-stage-purifier-gallery/shopping.webp", galleryPath: "seven-stage-purifier-gallery", gallery: ["shopping.webp", "shopping (1).webp", "shopping (2).webp", "shopping (3).webp"], image: { shell: "#edf5f5", trim: "#aac7ca", accent: "#35aaa0", style: "tank" } },
+      { id: "swift-copper", name: "Proven Aqua Swift Copper RO Water Purifier", tech: "RO + UV + UF · TDS adjuster", price: 3999, mrp: 29999, rating: null, reviews: 371, badge: "Popular", tag: "TDS CONTROL", image: { shell: "#f5f7f9", trim: "#c5d1d8", accent: "#ca8051", style: "slim" } },
+      { id: "omega-12l", name: "Aqua Omega 12L RO Water Purifier", tech: "RO + UF + UV + UV LED · TDS control", price: 4299, mrp: 12500, rating: null, reviews: null, badge: "", tag: "12L TANK", image: { shell: "#f7fbff", trim: "#cbdce5", accent: "#378cc8", style: "wide" } },
+      { id: "omega-uv", name: "Aqua Omega UV Water Purifier", tech: "UV + UF · Copper technology · 12L", price: 4499, mrp: 14500, rating: null, reviews: 3, badge: "", tag: "UV + UF", image: { shell: "#f4f6f7", trim: "#c9d0d5", accent: "#4c91ba", style: "tall" } },
+      { id: "d-pure-4in1", name: "AQUA D PURE 4-in-1 Copper RO Water Purifier", tech: "10-stage filtration · 12L tank", price: 5246, mrp: 24999, rating: 4.1, reviews: 14241, badge: "Top rated", tag: "10 STAGE", photo: "aqua-d-pure-4-in-1.jpeg", image: { shell: "#212d35", trim: "#53636c", accent: "#cb8d50", style: "black" } },
+      { id: "d-pure-alkaline", name: "AQUA D PURE Alkaline RO Water Purifier", tech: "RO + UV + UF · Copper · 12L tank", price: 5277, mrp: 19999, rating: 4.0, reviews: 4449, badge: "Top rated", tag: "ALKALINE", image: { shell: "#22282c", trim: "#5c676c", accent: "#c6a363", style: "black-glass" } },
+      { id: "mars-stage", name: "Aqua Mars Stage Purification Water Purifier", tech: "RO + B12 + UF · Copper · TDS control", price: 5699, mrp: 21999, rating: 3.5, reviews: 8, badge: "", tag: "UV LED", image: { shell: "#f8fafb", trim: "#c9d2d7", accent: "#5f7fbd", style: "panel" } },
+      { id: "mars-ro", name: "Aqua Mars RO + UV + UF Water Purifier", tech: "Wall-mount · 9L storage", price: 5699, mrp: 19999, rating: 2.4, reviews: 10, badge: "", tag: "9L TANK", image: { shell: "#eef8f7", trim: "#c4d9d7", accent: "#44a99a", style: "tank" } },
+      { id: "pureit-wave", name: "Pureit Wave Prime Water Purifier", tech: "RO + MF · 7L storage", price: 6999, mrp: 11999, rating: 4.2, reviews: 1909, badge: "Top rated", tag: "7L TANK", image: { shell: "#f7f8fa", trim: "#bfcbd1", accent: "#477cae", style: "curved" } },
+      { id: "aqua-v5", name: "Aqua V5 Zinc Copper Alkaline RO Purifier", tech: "RO + UV + UF · TDS control · 10L", price: 6799, mrp: 21999, rating: 2.8, reviews: 8, badge: "", tag: "10L TANK", image: { shell: "#171f24", trim: "#44545d", accent: "#367fbd", style: "black-glass" } },
+      { id: "havells-lite", name: "Havells Aquas Lite Water Purifier", tech: "UV + UF · 4-stage · 7L storage", price: 6790, mrp: 13290, rating: 3.9, reviews: 4247, badge: "Top rated", tag: "UV + UF", image: { shell: "#f7f8f8", trim: "#cfd7db", accent: "#6d9eae", style: "slim" } }
+    ];
+
+    const rupees = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+    const productGrid = document.getElementById("productGrid");
+    const resultCount = document.getElementById("resultCount");
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
+    const cart = new Map();
+    const orderNumber = "916369860092";
+    let leadDismissed = false;
+    let leadInteracted = false;
+    let activeGallery = null;
+    let activeGalleryIndex = 0;
+    let galleryReturnFocus = null;
+
+    function discountPercent(product) {
+      return Math.max(0, Math.round((1 - product.price / product.mrp) * 100));
+    }
+
+    function ratingMarkup(product) {
+      if (product.rating === null) {
+        return `<div class="rating"><span class="no-rating">★ ${product.reviews ? `${product.reviews.toLocaleString("en-IN")} reviews` : "New listing · ratings coming soon"}</span></div>`;
+      }
+      return `<div class="rating" aria-label="${product.rating} out of 5 stars"><span aria-hidden="true">★</span> <span>${product.rating.toFixed(1)} <span>(${product.reviews.toLocaleString("en-IN")})</span></span></div>`;
+    }
+
+    function productImage(product) {
+      const { shell, trim, accent, style } = product.image;
+      const width = style === "wide" ? 178 : style === "slim" ? 134 : 154;
+      const x = (300 - width) / 2;
+      const screen = style !== "tank" && style !== "curved";
+      const tank = style === "tank" || style === "glass" || style === "black-glass";
+      const bodyRadius = style === "curved" ? 42 : style === "panel" ? 18 : 28;
+      const glass = style === "glass" || style === "tank" || style === "black-glass";
+      const dark = style === "black" || style === "black-glass";
+      const displayX = 129;
+      const displayY = style === "panel" ? 95 : 81;
+      const displayHeight = style === "panel" ? 76 : 92;
+      const waterLevel = style === "tank" ? 202 : 194;
+      const detail = dark
+        ? `<path d="M${x + 17} 67h12v131h-12z" fill="#fff" opacity=".08"/><path d="M${x + width - 18} 74h4v123h-4z" fill="#fff" opacity=".08"/>`
+        : `<path d="M${x + 14} 70h10v126h-10z" fill="#fff" opacity=".48"/><path d="M${x + width - 18} 72h4v124h-4z" fill="#fff" opacity=".35"/>`;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" fill="none">
+        <defs>
+          <linearGradient id="body" x1="${x}" y1="70" x2="${x + width}" y2="230" gradientUnits="userSpaceOnUse"><stop stop-color="${trim}"/><stop offset=".18" stop-color="${shell}"/><stop offset=".72" stop-color="${shell}"/><stop offset="1" stop-color="${trim}"/></linearGradient>
+          <linearGradient id="top" x1="${x}" y1="57" x2="${x + width}" y2="78" gradientUnits="userSpaceOnUse"><stop stop-color="${shell}"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="${trim}"/></linearGradient>
+          <linearGradient id="water" x1="0" y1="${waterLevel}" x2="0" y2="222" gradientUnits="userSpaceOnUse"><stop stop-color="${accent}" stop-opacity=".12"/><stop offset="1" stop-color="${accent}" stop-opacity=".5"/></linearGradient>
+          <linearGradient id="screen" x1="${displayX}" y1="${displayY}" x2="${displayX + 44}" y2="${displayY + displayHeight}" gradientUnits="userSpaceOnUse"><stop stop-color="#23495a"/><stop offset="1" stop-color="#102936"/></linearGradient>
+        </defs>
+        <ellipse cx="150" cy="252" rx="${width * .53}" ry="12" fill="#2c6570" opacity=".12"/>
+        <path d="M${x + 9} 77Q${x + 9} 62 ${x + 25} 62H${x + width - 25}Q${x + width - 9} 62 ${x + width - 9} 77V216Q${x + width - 9} 232 ${x + width - 25} 232H${x + 25}Q${x + 9} 232 ${x + 9} 216Z" fill="url(#body)" stroke="${trim}" stroke-width="2"/>
+        ${detail}
+        <path d="M${x + 16} 71Q${x + 16} 58 ${x + 30} 58H${x + width - 30}Q${x + width - 16} 58 ${x + width - 16} 71V83H${x + 16}Z" fill="url(#top)" stroke="${trim}" stroke-width="1.5"/>
+        <path d="M${x + 29} 70h${width - 58}" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>
+        ${tank ? `<path d="M${x + 30} 181Q${x + 30} 174 ${x + 37} 174H${x + width - 37}Q${x + width - 30} 174 ${x + width - 30} 181V212Q${x + width - 30} 220 ${x + width - 37} 220H${x + 37}Q${x + 30} 220 ${x + 30} 212Z" fill="url(#water)" stroke="${accent}" stroke-opacity=".38"/><path d="M${x + 36} ${waterLevel}h${width - 72}" stroke="${accent}" stroke-opacity=".7" stroke-width="2"/>` : ""}
+        ${screen ? `<rect x="${displayX - 7}" y="${displayY - 7}" width="58" height="${displayHeight + 14}" rx="14" fill="${dark ? "#3d494f" : "#e3eaec"}"/><rect x="${displayX}" y="${displayY}" width="44" height="${displayHeight}" rx="9" fill="url(#screen)"/><circle cx="${displayX + 22}" cy="${displayY + 27}" r="14" fill="#112d3b" stroke="${accent}" stroke-width="1.5"/><circle cx="${displayX + 22}" cy="${displayY + 27}" r="4" fill="${accent}"/><path d="M${displayX + 11} ${displayY + 57}h22" stroke="${accent}" stroke-width="2.5" stroke-linecap="round"/><circle cx="${displayX + 15}" cy="${displayY + 69}" r="2" fill="#89c9ce"/><circle cx="${displayX + 22}" cy="${displayY + 69}" r="2" fill="#89c9ce"/><circle cx="${displayX + 29}" cy="${displayY + 69}" r="2" fill="#89c9ce"/>` : `<rect x="${x + 36}" y="104" width="${width - 72}" height="7" rx="3.5" fill="${accent}" opacity=".72"/><circle cx="150" cy="131" r="13" fill="${accent}" opacity=".13"/><path d="M145 131h10m-5-5v10" stroke="${accent}" stroke-width="2" stroke-linecap="round"/>`}
+        <path d="M135 236h30v12q0 11-11 11h-8q-11 0-11-11z" fill="${trim}" stroke="#b5c5ca" stroke-width="2"/><path d="M165 240h15q7 0 7 7v2h-22" stroke="${trim}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M163 249h13" stroke="${accent}" stroke-width="2" stroke-linecap="round"/>
+        <path d="M143 265h14" stroke="${trim}" stroke-width="4" stroke-linecap="round"/>
+      </svg>`;
+      return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+    }
+
+    function productMarkup(product, index) {
+      const imageMarkup = product.gallery
+        ? `<button class="gallery-trigger" type="button" data-gallery-id="${product.id}" aria-label="View ${product.gallery.length} photos of ${product.name}"><img class="product-image" src="${product.photo}" alt="${product.name} product photo" loading="eager" decoding="async"><span class="gallery-hint">View ${product.gallery.length} photos</span></button>`
+        : `<img class="product-image" src="${product.photo || productImage(product)}" alt="${product.name} ${product.photo ? "product photo" : "illustration"}" loading="${index < 4 ? "eager" : "lazy"}" decoding="async">`;
+      return `<article class="product-card">
+        <div class="product-photo">
+          <span class="discount">${discountPercent(product)}% OFF</span>
+          ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
+          ${imageMarkup}
+        </div>
+        <div class="product-info">
+          <div class="product-category">${product.tag}</div>
+          <h3>${product.name}</h3>
+          ${ratingMarkup(product)}
+          <div class="price-line"><span class="price">${rupees.format(product.price)}</span><span class="old-price">${rupees.format(product.mrp)}</span></div>
+          <div class="save-line">You save ${rupees.format(product.mrp - product.price)}</div>
+          <div class="product-actions">
+            <button class="btn btn-quiet add-cart" data-id="${product.id}" type="button">Add to cart</button>
+            <button class="btn btn-primary buy-now" data-id="${product.id}" type="button">Buy now</button>
+          </div>
+          <div class="shipping-note"><svg class="icon"><use href="#i-check"/></svg> Delivery &amp; installation: confirm with us</div>
+        </div>
+      </article>`;
+    }
+
+    function renderGallerySlide() {
+      if (!activeGallery) return;
+      const slides = activeGallery.gallery;
+      document.getElementById("galleryTrack").style.transform = `translateX(-${activeGalleryIndex * 100}%)`;
+      document.getElementById("galleryCount").textContent = `Photo ${activeGalleryIndex + 1} of ${slides.length}`;
+      document.getElementById("galleryFilename").textContent = slides[activeGalleryIndex];
+      document.querySelectorAll(".gallery-dot").forEach((dot, index) => {
+        dot.setAttribute("aria-current", String(index === activeGalleryIndex));
+      });
+    }
+
+    function openGallery(product) {
+      if (!product || !product.gallery) return;
+      activeGallery = product;
+      activeGalleryIndex = 0;
+      galleryReturnFocus = document.activeElement;
+      document.getElementById("galleryTitle").textContent = product.name;
+      document.getElementById("galleryTrack").innerHTML = product.gallery.map(file =>
+        `<div class="gallery-slide"><img src="${product.galleryPath}/${encodeURIComponent(file)}" alt="${product.name} — ${file}" decoding="async"></div>`
+      ).join("");
+      document.getElementById("galleryDots").innerHTML = product.gallery.map((file, index) =>
+        `<button class="gallery-dot" type="button" aria-label="Show ${file}" aria-current="${index === 0}" data-gallery-index="${index}"></button>`
+      ).join("");
+      const dialog = document.getElementById("productGallery");
+      dialog.classList.add("open");
+      dialog.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      renderGallerySlide();
+      document.getElementById("closeGallery").focus();
+    }
+
+    function closeGallery() {
+      const dialog = document.getElementById("productGallery");
+      if (!dialog.classList.contains("open")) return;
+      dialog.classList.remove("open");
+      dialog.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      activeGallery = null;
+      if (galleryReturnFocus && galleryReturnFocus.isConnected) galleryReturnFocus.focus();
+    }
+
+    function renderProducts() {
+      const query = searchInput.value.trim().toLowerCase();
+      const matches = products.filter(product => `${product.name} ${product.tech} ${product.tag}`.toLowerCase().includes(query));
+      const sort = sortSelect.value;
+      if (sort === "low") matches.sort((a, b) => a.price - b.price);
+      if (sort === "high") matches.sort((a, b) => b.price - a.price);
+      resultCount.textContent = `${matches.length} ${matches.length === 1 ? "product" : "products"}`;
+      productGrid.innerHTML = matches.length
+        ? matches.map((product, index) => productMarkup(product, products.indexOf(product))).join("")
+        : `<div class="empty-state">No matching products found. Try another search, or <a class="text-link" href="https://wa.me/${orderNumber}?text=Hello%2C%20I%20am%20looking%20for%20a%20water%20purifier." target="_blank" rel="noopener noreferrer">ask us on WhatsApp</a>.</div>`;
+    }
+
+    function orderLink(lines, heading) {
+      const message = `${heading}\n${lines}\n\nPlease confirm current price, stock, delivery and installation details.`;
+      return `https://wa.me/${orderNumber}?text=${encodeURIComponent(message)}`;
+    }
+
+    function openWhatsApp(url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function updateCart() {
+      const items = [...cart.entries()];
+      const quantity = items.reduce((sum, [, count]) => sum + count, 0);
+      const total = items.reduce((sum, [id, count]) => sum + products.find(product => product.id === id).price * count, 0);
+      document.getElementById("cartCount").textContent = quantity;
+      document.getElementById("drawerCount").textContent = quantity ? `(${quantity})` : "";
+      document.getElementById("subtotal").textContent = rupees.format(total);
+      document.getElementById("cartItems").innerHTML = items.length
+        ? items.map(([id, count]) => {
+            const product = products.find(item => item.id === id);
+            return `<div class="cart-row"><div><strong>${product.name}</strong><small>${rupees.format(product.price)} each</small><div class="qty-control"><button type="button" data-qty="-1" data-id="${id}" aria-label="Remove one ${product.name}">−</button><span>${count}</span><button type="button" data-qty="1" data-id="${id}" aria-label="Add one ${product.name}">+</button></div></div><span class="cart-row-price">${rupees.format(product.price * count)}</span></div>`;
+          }).join("")
+        : `<div class="cart-empty"><svg class="icon" style="width:32px;height:32px;color:#7da9b4"><use href="#i-cart"/></svg><p>Your cart is waiting for something good.</p><a class="text-link" href="#products" id="continueShopping">Browse water purifiers →</a></div>`;
+    }
+
+    function setCartOpen(open) {
+      const drawer = document.getElementById("cartDrawer");
+      const scrim = document.getElementById("scrim");
+      drawer.classList.toggle("open", open);
+      scrim.classList.toggle("open", open);
+      document.body.style.overflow = open ? "hidden" : "";
+      if (open) {
+        drawer.setAttribute("aria-hidden", "false");
+        document.getElementById("closeCart").focus();
+      } else {
+        document.getElementById("openCart").focus();
+        drawer.setAttribute("aria-hidden", "true");
+      }
+    }
+
+    function addToCart(id) {
+      cart.set(id, (cart.get(id) || 0) + 1);
+      updateCart();
+      setCartOpen(true);
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderProducts();
+    updateCart();
+    searchInput.addEventListener("input", renderProducts);
+    sortSelect.addEventListener("change", renderProducts);
+    productGrid.addEventListener("click", event => {
+      const galleryButton = event.target.closest("button[data-gallery-id]");
+      if (galleryButton) {
+        openGallery(products.find(item => item.id === galleryButton.dataset.galleryId));
+        return;
+      }
+      const button = event.target.closest("button[data-id]");
+      if (!button) return;
+      const product = products.find(item => item.id === button.dataset.id);
+      if (!product) return;
+      if (button.classList.contains("add-cart")) addToCart(product.id);
+      if (button.classList.contains("buy-now")) openWhatsApp(orderLink(`• ${product.name} — ${rupees.format(product.price)}`, "Hello, I would like to order:"));
+    });
+    document.querySelectorAll(".category[data-category]").forEach(button => button.addEventListener("click", () => {
+      searchInput.value = button.dataset.category === "Water Purifier" ? "" : button.dataset.category;
+      renderProducts();
+      document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+    }));
+
+    document.getElementById("openCart").addEventListener("click", () => setCartOpen(true));
+    document.getElementById("closeCart").addEventListener("click", () => setCartOpen(false));
+    document.getElementById("scrim").addEventListener("click", () => setCartOpen(false));
+    document.getElementById("cartItems").addEventListener("click", event => {
+      const button = event.target.closest("button[data-qty]");
+      if (button) {
+        const nextCount = (cart.get(button.dataset.id) || 0) + Number(button.dataset.qty);
+        if (nextCount > 0) cart.set(button.dataset.id, nextCount);
+        else cart.delete(button.dataset.id);
+        updateCart();
+        return;
+      }
+      if (event.target.closest("#continueShopping")) setCartOpen(false);
+    });
+    document.getElementById("checkout").addEventListener("click", () => {
+      if (!cart.size) {
+        document.getElementById("cartItems").innerHTML = `<div class="cart-empty">Your cart is empty. Add a purifier to send an enquiry.</div>`;
+        return;
+      }
+      const lines = [...cart.entries()].map(([id, count]) => {
+        const product = products.find(item => item.id === id);
+        return `• ${product.name} × ${count} — ${rupees.format(product.price * count)}`;
+      }).join("\n");
+      openWhatsApp(orderLink(lines, "Hello, I would like to enquire about my cart:"));
+    });
+
+    document.getElementById("closeGallery").addEventListener("click", closeGallery);
+    document.getElementById("productGallery").addEventListener("click", event => {
+      if (event.target.id === "productGallery") closeGallery();
+    });
+    document.getElementById("galleryPrev").addEventListener("click", () => {
+      if (!activeGallery) return;
+      activeGalleryIndex = (activeGalleryIndex - 1 + activeGallery.gallery.length) % activeGallery.gallery.length;
+      renderGallerySlide();
+    });
+    document.getElementById("galleryNext").addEventListener("click", () => {
+      if (!activeGallery) return;
+      activeGalleryIndex = (activeGalleryIndex + 1) % activeGallery.gallery.length;
+      renderGallerySlide();
+    });
+    document.getElementById("galleryDots").addEventListener("click", event => {
+      const dot = event.target.closest("button[data-gallery-index]");
+      if (!dot || !activeGallery) return;
+      activeGalleryIndex = Number(dot.dataset.galleryIndex);
+      renderGallerySlide();
+    });
+
+    document.querySelectorAll(".lead-form").forEach(form => {
+      form.addEventListener("focusin", () => { leadInteracted = true; });
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const data = new FormData(form);
+        const name = String(data.get("name") || "").trim();
+        const phone = String(data.get("phone") || "").trim();
+        const email = String(data.get("email") || "").trim();
+        const lines = [`Name: ${name}`, `Phone: ${phone}`, ...(email ? [`Email: ${email}`] : []), "Request: Free home water test (TDS, pH and hardness)."];
+        const status = form.querySelector(".form-status");
+        status.hidden = false;
+        status.textContent = "Your WhatsApp enquiry is ready. Please send it to confirm your request.";
+        leadDismissed = true;
+        closeModal();
+        openWhatsApp(orderLink(lines.join("\n"), "Hello, I would like to book a free water test:"));
+      });
+    });
+
+    const complaintFilesInput = document.getElementById("complaintFiles");
+    const attachmentList = document.getElementById("attachmentList");
+    const complaintStatus = document.getElementById("complaintStatus");
+    let complaintFiles = [];
+    let attachmentPreviewUrls = [];
+
+    function renderComplaintFiles() {
+      attachmentPreviewUrls.forEach(url => URL.revokeObjectURL(url));
+      attachmentPreviewUrls = [];
+      attachmentList.replaceChildren();
+      complaintFiles.forEach((file, index) => {
+        const item = document.createElement("div");
+        item.className = "attachment-item";
+        const preview = document.createElement(file.type.startsWith("image/") ? "img" : "span");
+        if (file.type.startsWith("image/")) {
+          const url = URL.createObjectURL(file);
+          attachmentPreviewUrls.push(url);
+          preview.src = url;
+          preview.alt = `Preview of ${file.name}`;
+        } else {
+          preview.className = "attachment-file-icon";
+          preview.textContent = "PDF";
+          preview.setAttribute("aria-label", "PDF attachment");
+        }
+        const filename = document.createElement("span");
+        filename.className = "attachment-name";
+        filename.textContent = file.name;
+        const remove = document.createElement("button");
+        remove.className = "attachment-remove";
+        remove.type = "button";
+        remove.textContent = "×";
+        remove.setAttribute("aria-label", `Remove ${file.name}`);
+        remove.addEventListener("click", () => {
+          complaintFiles.splice(index, 1);
+          renderComplaintFiles();
+          complaintStatus.hidden = true;
+        });
+        item.append(preview, filename, remove);
+        attachmentList.append(item);
+      });
+    }
+
+    complaintFilesInput.addEventListener("change", () => {
+      const selectedFiles = [...complaintFilesInput.files];
+      complaintFilesInput.value = "";
+      const allowedFiles = selectedFiles.every(file => file.type.startsWith("image/") || file.type === "application/pdf");
+      const exceedsFileCount = complaintFiles.length + selectedFiles.length > 5;
+      const exceedsFileSize = selectedFiles.some(file => file.size > 10 * 1024 * 1024) ||
+        [...complaintFiles, ...selectedFiles].reduce((total, file) => total + file.size, 0) > 25 * 1024 * 1024;
+      if (!allowedFiles || exceedsFileCount || exceedsFileSize) {
+        complaintStatus.hidden = false;
+        complaintStatus.classList.add("error");
+        complaintStatus.textContent = !allowedFiles
+          ? "Choose image files or PDF documents only."
+          : exceedsFileCount
+            ? "Choose up to 5 files total."
+            : "Each file must be 10 MB or less, with a 25 MB total limit.";
+        return;
+      }
+      complaintStatus.hidden = true;
+      complaintStatus.classList.remove("error");
+      complaintFiles.push(...selectedFiles);
+      renderComplaintFiles();
+    });
+
+    document.getElementById("complaintForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const name = String(data.get("name") || "").trim();
+      const phone = String(data.get("phone") || "").trim();
+      const model = String(data.get("model") || "").trim();
+      const details = String(data.get("details") || "").trim();
+      const lines = [
+        "Hello, I would like to report a purifier issue / request service.",
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        ...(model ? [`Purifier model: ${model}`] : []),
+        `Issue: ${details}`,
+        ...(complaintFiles.length ? [`Files to attach in this chat: ${complaintFiles.map(file => file.name).join(", ")}`] : []),
+        "",
+        "I will attach the selected photo/file(s) in this WhatsApp chat."
+      ];
+      complaintStatus.hidden = false;
+      complaintStatus.classList.remove("error");
+      complaintStatus.textContent = complaintFiles.length
+        ? "WhatsApp will open with your complaint. Attach the selected file(s) in the chat before sending."
+        : "WhatsApp will open with your complaint. Review the message and send it to the dealer.";
+      openWhatsApp(`https://wa.me/${orderNumber}?text=${encodeURIComponent(lines.join("\n"))}`);
+    });
+
+    const leadModal = document.getElementById("leadModal");
+    const closeModal = () => {
+      leadDismissed = true;
+      leadModal.classList.remove("open");
+    };
+    const leadTimer = window.setTimeout(() => {
+      if (!leadDismissed && !leadInteracted && !document.getElementById("cartDrawer").classList.contains("open")) leadModal.classList.add("open");
+    }, 5000);
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    leadModal.addEventListener("click", event => { if (event.target === leadModal) closeModal(); });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeGallery();
+        closeModal();
+        setCartOpen(false);
+      } else if (activeGallery && event.key === "ArrowRight") {
+        activeGalleryIndex = (activeGalleryIndex + 1) % activeGallery.gallery.length;
+        renderGallerySlide();
+      } else if (activeGallery && event.key === "ArrowLeft") {
+        activeGalleryIndex = (activeGalleryIndex - 1 + activeGallery.gallery.length) % activeGallery.gallery.length;
+        renderGallerySlide();
+      }
+    });
+    leadModal.addEventListener("transitionend", () => {
+      if (leadModal.classList.contains("open")) leadModal.querySelector("input").focus();
+    });
+    window.addEventListener("pagehide", () => window.clearTimeout(leadTimer), { once: true });
+
+  </script>
+</body>
+</html>
